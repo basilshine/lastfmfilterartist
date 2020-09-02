@@ -1,0 +1,16 @@
+<div class="artist-images">
+  <img ng-src="{{$ctrl.artist.image[4]['#text'] || 'images/no-image.png'}}" class="artist" /></div>
+<h1>{{$ctrl.artist.name}}</h1>
+
+<p>{{$ctrl.artist.bio.summary}}</p>
+<div>
+  <ul class="topalbums">
+    <li ng-repeat="album in $ctrl.discography" class="thumbnail artist-list-item">
+      <a href="{{album.url}}">
+        <img ng-src="{{album.image[2]['#text'] || 'images/no-image.png'}}" alt="{{album.name}}" />
+      </a><br>
+      <a href="{{album.url}}">{{album.name}}</a>
+    </li>
+    <li ng-show="!$ctrl.discography.length">No albums</li>
+  </ul>
+</div>

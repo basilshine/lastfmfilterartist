@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 class="display-3">Last.FM artist search!</h1>
+      <p>
+        <div class="form-group">
+          <label for="artistNameHelpInput">Artist name</label>
+          <input type="text" class="form-control" id="artistNameHelpInput" aria-describedby="artistNameHelp"
+            placeholder="Enter artist name" ng-model="$ctrl.name">
+          <small id="artistNameHelp" class="form-text text-muted">Fill the input and press search.</small>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="$ctrl.submit()">
+          Search for "{{$ctrl.name}}"
+        </button>
+      </p>
+    </div>
+    <div class="col-md-12">
+      <!--Body content-->
+
+      <ul class="artists">
+        <li ng-repeat="artist in $ctrl.artists" class="thumbnail artist-list-item">
+          <a href="#!/artists/{{artist.name}}" class="thumb">
+            <img check-image ng-src="{{artist.image[0]['#text'] || 'images/no-image.png'}}" alt="{{artist.name}}" />
+          </a>
+          <a href="#!/artists/{{artist.name}}" class="artist-name">{{artist.name}}</a>
+        </li>
+        <li ng-show="!$ctrl.artists.length">No artists found</li>
+      </ul>
+    </div>
+  </div>
+</div>

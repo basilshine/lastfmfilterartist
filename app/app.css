@@ -1,0 +1,124 @@
+body {
+  padding: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+  margin-top: 0;
+}
+
+/* View: Artist list */
+.artists {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.artists li {
+  padding-top: 15px;
+  overflow: hidden;
+  padding-right: 15px;
+}
+
+.thumb {
+  float: left;
+  height: auto;
+  margin: -0.5em 1em 0.5em 0.5em;
+  width: 100px;
+}
+
+.artist-name {
+  font-size: 1.5em;
+}
+
+/* View: Artist detail */
+.artist {
+  background-color: white;
+  display: none;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.artist:first-child {
+  display: block;
+}
+
+.artist-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+
+.artist-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phartistone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.artist-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+.artist-thumbs li img {
+  width: 150px;
+  height: auto;
+}
+
+.info {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info dt {
+  font-weight: bold;
+}
+
+.info>li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.info>li>span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.topalbums {
+  clear: both;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.topalbums li {
+  padding: 15px;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.topalbums li img {
+  width: 150px;
+  height: auto;
+}
